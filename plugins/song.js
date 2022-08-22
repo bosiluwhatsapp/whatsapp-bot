@@ -132,10 +132,10 @@ Module({
         }, ]
     }]
     const listMessage = {
-        text: "And 9 more results...",
+        text: "And 9 more 🤗 results...",
         footer: "Hey " + message.data.pushName,
         title: sr[0].title,
-        buttonText: "Select song",
+        buttonText: "Select song 🔰",
         sections
     }
     await message.client.sendMessage(message.jid, listMessage)
@@ -149,7 +149,7 @@ Module({
     var myid = message.client.user.id.split("@")[0].split(":")[0]
     let sr = await yts(match[1]);
     sr = sr.all;
-    if (sr.length < 1) return await message.sendReply("*No results found!*");
+    if (sr.length < 1) return await message.sendReply("*No results found! 😥*");
     var videos = [];
     for (var index = 0; index < sr.length; index++) {
         videos.push({
@@ -163,10 +163,10 @@ Module({
         rows: videos
     }]
     const listMessage = {
-        text: "And " + (sr.length - 1) + " more results...",
+        text: "And " + (sr.length - 1) + " 😊 more results...",
         footer: "Hey " + message.data.pushName,
         title: sr[0].title,
-        buttonText: "Select a video",
+        buttonText: "Select a video ✔",
         sections
     }
     await message.client.sendMessage(message.jid, listMessage)
@@ -178,17 +178,17 @@ Module({
     if (message.list && message.list.startsWith("ytsl") && message.list.includes(message.client.user.id.split("@")[0].split(":")[0])) {
     const buttons = [{
                                 urlButton: {
-                                    displayText: '𝑊𝐴𝑇𝐶𝐻 𝑂𝑁 𝑌𝑂𝑈𝑇𝑈𝐵𝐸',
+                                    displayText: '𝑊𝐴𝑇𝐶𝐻 𝑂𝑁 𝑌𝑂𝑈𝑇𝑈𝐵𝐸 👁',
                                     url: 'https://youtu.be/'+ message.list.split(";")[1]
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: '𝐴𝑈𝐷𝐼𝑂',
+                                    displayText: '𝐴𝑈𝐷𝐼𝑂 ⚜',
                                     id: 'ytsa;' + message.client.user.id.split("@")[0].split(":")[0] + ";" + message.list.split(";")[1]
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: '𝑉𝐼𝐷𝐸𝑂',
+                                    displayText: '𝑉𝐼𝐷𝐸𝑂 ⚜',
                                     id: 'ytsv;' + message.client.user.id.split("@")[0].split(":")[0] + ";" + message.list.split(";")[1]
                                 }
                             }]   
